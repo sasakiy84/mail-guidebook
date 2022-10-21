@@ -16,7 +16,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # change "your.domain.name" to real domain you use.
           # this value has to be the same with the domain specified in "deploy-s3.yml"
-          YOUR_DOMAIN_NAME: your.domain.name
+          YOUR_DOMAIN_NAME: mail-guidebook.sasakiy84.net
           # change "your-stack-name" to unique name, like "autodeploy-guidebook-stack"
-          YOUR_STACK_NAME: your-stack-name
+          YOUR_STACK_NAME: mail-guidebook
         run: aws s3 cloudformation create-stack --template-body file://cloudformation.yaml --stack-name ${YOUR_STACK_NAME} --parameters ParameterKey=YourDomainName,ParameterValue=${YOUR_DOMAIN_NAME}
