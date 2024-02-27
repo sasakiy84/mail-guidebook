@@ -1,9 +1,9 @@
 name: deploy to s3
 on:
   # comment out following three lines if you want to deploy automatically
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #      - main
   workflow_dispatch:
 
 jobs:
